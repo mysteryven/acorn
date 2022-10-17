@@ -133,11 +133,11 @@ pp.skipSpace = function() {
     case 32: case 160: // ' '
       ++this.pos
       break
-    case 13:
+    case 13: // \r
       if (this.input.charCodeAt(this.pos + 1) === 10) {
         ++this.pos
       }
-    case 10: case 8232: case 8233:
+    case 10: case 8232: case 8233: // \n '',''
       ++this.pos
       if (this.options.locations) {
         ++this.curLine
@@ -178,6 +178,7 @@ pp.finishToken = function(type, val) {
   this.type = type
   this.value = val
 
+  // TODO 这个是干什么的？不知道
   this.updateContext(prevType)
 }
 

@@ -7,6 +7,7 @@ import {SCOPE_TOP, SCOPE_FUNCTION, SCOPE_ASYNC, SCOPE_GENERATOR, SCOPE_SUPER, SC
 
 export class Parser {
   constructor(options, input, startPos) {
+    // 格式化入参
     this.options = options = getOptions(options)
     this.sourceFile = options.sourceFile
     this.keywords = wordsRegexp(keywords[options.ecmaVersion >= 6 ? 6 : options.sourceType === "module" ? "5module" : 5])

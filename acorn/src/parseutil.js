@@ -35,7 +35,7 @@ pp.strictDirective = function(start) {
 
 // Predicate that tests whether the next token is of the given
 // type, and if yes, consumes it as a side effect.
-
+// 看一下当前的是不是 type，是的话，吃掉它，消费下一个
 pp.eat = function(type) {
   if (this.type === type) {
     this.next()

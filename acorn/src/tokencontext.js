@@ -35,6 +35,7 @@ pp.initialContext = function() {
   return [types.b_stat]
 }
 
+// TODO curContext 为什么只取最后一个？第一个默认为什么是 b_stat 不懂 
 pp.curContext = function() {
   return this.context[this.context.length - 1]
 }
