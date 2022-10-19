@@ -3,6 +3,9 @@ import {SCOPE_VAR, SCOPE_FUNCTION, SCOPE_TOP, SCOPE_ARROW, SCOPE_SIMPLE_CATCH, B
 
 const pp = Parser.prototype
 
+// 目前看下来，这个模块主要是为了校验错误的
+// 比如 export 的内容有没有导出 checkLocalExport
+// 比如同一个作用域内有没有重名 declareName
 class Scope {
   constructor(flags) {
     this.flags = flags
