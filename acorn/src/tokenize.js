@@ -178,7 +178,6 @@ pp.finishToken = function(type, val) {
   this.type = type
   this.value = val
 
-  // TODO 这个是干什么的？不知道
   this.updateContext(prevType)
 }
 
